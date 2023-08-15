@@ -85,7 +85,7 @@ main .presentation p {
 
 main .presentation .hire-me {
 	font-size: 2.5rem;
-	margin-top: 4.5rem;
+	margin-block: 4.5rem 25px;
 	padding: 1rem 2.6rem;
 	color: #fff;
 	background-color: var(--color-blue-1);
@@ -193,9 +193,5 @@ main .photo .contacts {
 
 	main .photo {
 		width: 25vw;
-	}
-
-	main .photo .draw {
-		
 	}
 }
