@@ -18,6 +18,16 @@ ul {
 	--color-light: #D1D3F3;
 }
 
+.button {
+	background-color: #fff;
+	color: var(--color-blue-2);
+	padding: 10px;
+	margin: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+	text-align: center;
+}
+
 body {
 	position: relative;
 	width: 100vw;
@@ -85,6 +95,9 @@ main .presentation p {
 
 main .presentation .hire-me {
 	font-size: 2.5rem;
+	font-weight: 700;
+	display: block;
+	width: fit-content;
 	margin-block: 4.5rem 25px;
 	padding: 1rem 2.6rem;
 	color: #fff;
@@ -145,6 +158,81 @@ main .photo .contacts {
 	transform-origin: rotate(180deg);
 }
 
+.sections {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	z-index: 3;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	gap: 5vh;
+}
+.sections:has(.active) {
+	background-color: #000c;
+	width: 100%;
+}
+
+.sections>* {
+	background-color: #03087B;
+	width: 4vw;
+	height: 3vw;
+	overflow: hidden;
+	color: transparent;
+	transition: width .3s, height .4s;
+}
+
+.sections>*:not(.active)>* {
+	display: none;
+}
+
+.sections>*.active {
+	width: 80vw;
+	height: 80vh;
+	right: 50%;
+	transform: translateX(50%);
+	color: var(--color-light);
+	padding: 7.5vh 8.5vw 0;
+	position: fixed;
+	border-radius: 15px;
+	transition: width 1s, height 1.5s;
+}
+
+.sections section .close {
+	background: none;
+	color: var(--color-light);
+	font-size: 3rem;
+	font-family: monospace;
+	width: 100%;
+	text-align: end;
+	cursor: pointer;
+}
+
+.sections form {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: fit-content;
+	margin-inline: auto;
+}
+
+.sections form :is(input,select,textarea) {
+	border-radius: 7px;
+	margin: 10px;
+	padding: 10px;
+	resize: none;
+}
+.sections form :is(input,select,textarea):focus-visible {
+	outline: none;
+}
+
+.sections #hire-form h2 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
 @media (max-width: 480px) {
 	:root {
 		font-size: 10px
@@ -179,6 +267,11 @@ main .photo .contacts {
 
 	.float {
 		width: 60vw;
+	}
+
+	.sections>* {
+		width: 9vw;
+		height: 6vw;
 	}
 }
 
