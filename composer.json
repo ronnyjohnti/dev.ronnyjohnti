@@ -1,0 +1,20 @@
+{
+    "name": "ronnyjohn/dev.ronnyjohnti",
+    "description": "My pernonal page.",
+    "type": "project",
+    "require": {
+        "symfony/mailer": "^7.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ronnyjohn\\Site\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ronny John",
+            "email": "me@ronnyjohnti.dev"
+        }
+    ]
+}
