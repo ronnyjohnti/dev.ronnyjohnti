@@ -108,18 +108,19 @@ main .presentation .hire-me {
 }
 
 main .photo {
-	width: 25vw;
 	margin: 0 auto;
-	padding: 20px 150px;
+	padding-block: 20px;
 }
 
 main .photo .draw {
 	width: 100%;
+	max-width: 200px;
 	border-radius: 26vh;
 	background-color: var(--color-blue-1);
-	display: inline-block;
+	display: block;
 	aspect-ratio: .7;
 	padding: 10%;
+	margin: 0 auto;
 }
 
 main .photo .draw img {
