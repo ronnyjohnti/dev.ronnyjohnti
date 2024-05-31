@@ -1,3 +1,4 @@
 /vendor
 /public
 /.idea
+.env

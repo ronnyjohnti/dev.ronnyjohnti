@@ -42,17 +42,18 @@ body {
 
 body>:is(header,main) {
 	z-index: 2;
-  position: relative;
+	position: relative;
 }
 
 header {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 }
 
 header h1 {
 	font-family: Leckerli One, cursive, sans-serif;
+	width: fit-content;
 }
 
 header ul {
@@ -107,7 +108,9 @@ main .presentation .hire-me {
 }
 
 main .photo {
-	width: 20vw;
+	width: 25vw;
+	margin: 0 auto;
+	padding: 20px 150px;
 }
 
 main .photo .draw {
@@ -135,6 +138,11 @@ main .photo .contacts {
 	margin-top: 20px;
 	text-align: center;
 }
+
+main .photo .contacts img {
+	width: 50px;
+}
+
 
 
 .float {
@@ -259,6 +267,7 @@ main .photo .contacts {
 	main .photo {
 		width: 65%;
 		margin-bottom: 3rem;
+		padding: 0;
 	}
 
 	main .photo p {
